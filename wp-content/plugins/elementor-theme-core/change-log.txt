@@ -1,0 +1,53 @@
+Released: 
+====================================================================================================================================
+02.03.2020
+- change file: /inc/class-mega-menu-edit.php
+	add apply_filters "cms_mega_menu/get_icons" to be able to add more icons
+====================================================================================================================================
+07.05.2020
+- change file: /inc/controls/class-control-icons.php
+	update fontawesome icons class to ver 5
+====================================================================================================================================
+11.06.2020
+- change file: /inc/helpers/widget.php
+	fix error when generate class file (single quote error)
+====================================================================================================================================
+12.06.2020
+- change file: /inc/helpers/widget.php
+	edit etc_add_custom_widget function. remove unlink class file
+====================================================================================================================================
+01.07.2020
+- change file: /inc/helpers/common.php
+	add function etc_register_shortcode to add a new shortcode
+====================================================================================================================================
+06.07.2020
+- change file: /inc/mega-menu/class-megamenu-walker.php
+	fix enqueue jquery.singlePageNav.js
+- change file: /inc/mega-menu/class-mega-menu-edit.php
+	fix function get_fields: add field 'menu-item-cms-onepage-offset'
+- change file: /inc/mega-menu/class-megamenu.php
+	fix function 'setup_nav_menu_item', 'update_nav_menu_item': save and get field 'menu-item-cms-onepage-offset'
+- change file: /inc/mega-menu/class-megamenu-walker.php
+	fix function start_el: change condition to add class 'is-one-page' to menu item, add offset data attribute to menu item
+- change file: /assets/js/lib/jquery.singlePageNav.js
+	+ fix scroll to section will add active class to menu item
+	+ add offset
+- change file: elementor-theme-core.php
+	update function load_scss_lib, add a filter to switch old/new ver of scss lib
+====================================================================================================================================
+09.07.2020
+• Update to add custom field to section and column then add custom classes to them.
+	- change file /elementor-theme-core.php:
+		+ add const ETC_TAB_NAME, ETC_TAB_TITLE
+		+ add action elementor/elements/elements_registered : replace section and column of elementor with ours
+		+ change function init_controls: add custom tab 'Elementor Theme Core'
+	- add custom section and cloumn file: /inc/elementor/section.php, /inc/elementor/column.php
+	- add elementor editor css file: /assets/css/elementor-editor.css
+====================================================================================================================================
+29.07.2020
+- change file /inc/elementor/section.php:
+	+ check filter : apply_filters('etc-custom-section/before-elementor-row', '');
+====================================================================================================================================
+30.07.2020
+- fix error with new Redux Framework (ver 4)
+====================================================================================================================================
